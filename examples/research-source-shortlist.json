@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "purpose": "P0 sources tagged researcher in the 11 October 2026 snapshot.",
+  "entries": [
+    {
+      "id": "local-subagents",
+      "title": "Subagents and custom roles",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "description": "Delegation workflows and local custom-agent files, including role instructions and inherited configuration.",
+      "category": "Agents",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "reviewer"
+      ],
+      "notes": [
+        "Standalone role files require name, description, and developer_instructions.",
+        "Local role-file discovery is distinct from hosted Work subagent availability.",
+        "Parallel work uses additional tokens; use narrow assignments and clear file ownership."
+      ],
+      "files": [
+        "~/.codex/agents/<role>.toml",
+        "<repo>/.codex/agents/<role>.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-cli",
+      "title": "Codex CLI",
+      "url": "https://learn.chatgpt.com/docs/codex/cli",
+      "description": "Local terminal entry point for coding, review, command execution, and scripted workflows.",
+      "category": "CLI",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli"
+      ],
+      "agent_types": [
+        "researcher",
+        "implementer",
+        "reviewer",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "This is the Codex terminal client referred to as ChatGPT CLI in the request.",
+        "Start in the intended workspace and inspect the active permissions.",
+        "No installation or update was performed for this library."
+      ],
+      "files": [
+        "<repo>/AGENTS.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-features",
+      "title": "Features",
+      "url": "https://learn.chatgpt.com/docs/features",
+      "description": "Entry point for projects, tools, long-running work, dots, and shared Pages.",
+      "category": "Foundations",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "operations"
+      ],
+      "notes": [
+        "Use it to choose the relevant workflow before configuring an agent."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-projects",
+      "title": "Projects and chats",
+      "url": "https://learn.chatgpt.com/docs/projects",
+      "description": "Organize shared instructions and sources while keeping each distinct outcome in a focused chat.",
+      "category": "Foundations",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer"
+      ],
+      "notes": [
+        "A ChatGPT project does not inherently provide local-folder access.",
+        "Codex CLI uses its working directory, optionally set with --cd.",
+        "Durable local guidance belongs in AGENTS.md or checked-in documentation."
+      ],
+      "files": [
+        "AGENTS.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "quickstart",
+      "title": "ChatGPT and Codex quickstart",
+      "url": "https://learn.chatgpt.com/docs/quickstart",
+      "description": "Choose Chat, Work, or Codex, then select the appropriate project and execution surface.",
+      "category": "Getting started",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cloud",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "operations"
+      ],
+      "notes": [
+        "The desktop application hosts several products. Codex CLI is the terminal interface for coding work; cloud environment setup is a separate step."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-instructions",
+      "title": "Custom instructions with AGENTS.md",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "description": "Instruction discovery and scoped overrides.",
+      "category": "Instructions",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "reviewer",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "One non-empty file per directory: override, standard name, then configured fallbacks.",
+        "Ordinary project notes require an explicit read.",
+        "Size-limit wording differs across guides; verify loading."
+      ],
+      "files": [
+        "~/.codex/AGENTS.md",
+        "~/.codex/AGENTS.override.md",
+        "<repo>/AGENTS.md",
+        "<repo>/<subdir>/AGENTS.override.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-build-skills",
+      "title": "Build skills",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "description": "Reusable skill authoring, discovery, invocation metadata, and plugin distribution.",
+      "category": "Skills and integrations",
+      "priority": "P0",
+      "surfaces": [
+        "cli",
+        "cloud",
+        "desktop",
+        "local"
+      ],
+      "agent_types": [
+        "automation",
+        "implementer",
+        "manager",
+        "researcher",
+        "reviewer"
+      ],
+      "notes": [
+        "SKILL.md needs a name and description; write precise triggers.",
+        "Local authoring paths are .agents/skills; plugins support distribution to other hosts.",
+        "Skills load progressively and do not merge solely because names match."
+      ],
+      "files": [
+        "~/.agents/skills/<skill>/SKILL.md",
+        "<repo>/.agents/skills/<skill>/SKILL.md",
+        "<skill>/agents/openai.yaml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-skills-plugins",
+      "title": "Skills & Plugins",
+      "url": "https://learn.chatgpt.com/docs/skills-and-plugins",
+      "description": "Distinguish a focused reusable workflow from an installable package of skills and tools.",
+      "category": "Skills and plugins",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "reviewer"
+      ],
+      "notes": [
+        "Skills bundle guidance and resources; plugins may bundle skills and MCP servers.",
+        "ChatGPT uses @ mentions; Codex supports $ skill mentions.",
+        "Matching a workflow does not itself prove tools are connected or allowed."
+      ],
+      "files": [
+        "SKILL.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    }
+  ]
+}

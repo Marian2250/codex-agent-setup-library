@@ -1,0 +1,19 @@
+Codex Agent Setup Library: actual query transcript
+
+$ node tools/demo.cjs --role researcher --priority P0
+8 of 53 sources
+P0  Subagents and custom roles
+P0  Codex CLI
+P0  Features
+P0  Projects and chats
+P0  ChatGPT and Codex quickstart
+P0  Custom instructions with AGENTS.md
+P0  Build skills
+P0  Skills & Plugins
+
+$ node tools/demo.cjs --query AGENTS.md --role researcher --priority P0
+3 of 53 sources
+P0  Codex CLI
+P0  Projects and chats
+P0  Custom instructions with AGENTS.md
+

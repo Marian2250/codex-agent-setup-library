@@ -1,0 +1,92 @@
+{
+  "edition": "1.0.0",
+  "snapshot_date": "2026-10-11",
+  "source_entries": 53,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 63,
+      "sha256": "74ac1db8f57eba145e9aa8a0f80c7b0673b47f616d764f06a891aae6aa96b8e5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5141,
+      "sha256": "c2dad2b3c89ef2a39972c1055f103b0a755a13ea49b235018e388b36bd7532a3"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 1844,
+      "sha256": "1b9e69e22889ec70aadaf788c4769b246f43b6207c90ffc955fbfd433e9b9649"
+    },
+    {
+      "path": "START-HERE.txt",
+      "bytes": 650,
+      "sha256": "87dd66ffc5607b408bd8c0409af727b140b0eb31d51e49d6f7e5609ff603919b"
+    },
+    {
+      "path": "USAGE.md",
+      "bytes": 796,
+      "sha256": "7b8427c4ae6a979b2bbcc0b7f4d4e44d015cbfc548d54e0b1cb847fe5b2153a4"
+    },
+    {
+      "path": "assets/library-demo.gif",
+      "bytes": 65421,
+      "sha256": "caf13b9777f56858d25368dffb9c84fe6a81d908e0fee9f6fedac2b845332ad7"
+    },
+    {
+      "path": "assets/reading-path.png",
+      "bytes": 61982,
+      "sha256": "5cb7ea227310b8e17dc39062ce3256960be7826624335b87c55d0baa4293ea1c"
+    },
+    {
+      "path": "examples/agent-brief.md",
+      "bytes": 1679,
+      "sha256": "a10f065ed3a9e7b67195f2f1aa097380a0dfbea71028b072a908f1007481ce1a"
+    },
+    {
+      "path": "examples/demo-transcript.txt",
+      "bytes": 479,
+      "sha256": "26a81d21a07dbbf45de1735f90db2af7142b33234c7347e5dd90c04c2d7c9ea7"
+    },
+    {
+      "path": "examples/research-agent-brief.md",
+      "bytes": 2413,
+      "sha256": "8f61eeaa4fed3a89a753d9b9dc24268937d8b40f640bbce7c186424761513cb9"
+    },
+    {
+      "path": "examples/research-source-shortlist.json",
+      "bytes": 7893,
+      "sha256": "57e6dbf67ba50d8c3e48633ef7448faef9c8528b4cac8836147d70ba28297f23"
+    },
+    {
+      "path": "index.html",
+      "bytes": 151367,
+      "sha256": "8783489b0ef265fc39b094a9b0e0dbe0d83a44d731b70e081ecf64fa043883bf"
+    },
+    {
+      "path": "library.json",
+      "bytes": 65505,
+      "sha256": "e32e3ccbf575848165a72cfc6eddbf42f8cc9b49f666f244b63251c0dd802756"
+    },
+    {
+      "path": "tests/library.test.cjs",
+      "bytes": 6720,
+      "sha256": "027880d6394a73f860c0a53f66cde39d10ba4e874905b7b37e071581a56813bd"
+    },
+    {
+      "path": "tools/demo.cjs",
+      "bytes": 861,
+      "sha256": "fede0792d8f8d399a174478664a4ba7527a03f1b08b063a1e07aa1d92a5d9235"
+    },
+    {
+      "path": "tools/library.cjs",
+      "bytes": 4662,
+      "sha256": "880d1c774403f8768ba77444a1f59f95b6983eb5e23056da6b4d98ff5d7895d2"
+    },
+    {
+      "path": "tools/verify.py",
+      "bytes": 3197,
+      "sha256": "20f3a7e878502a1e1ddbf513a20135d0262ca025cf3fe63e4d36e37f508bf87c"
+    }
+  ]
+}

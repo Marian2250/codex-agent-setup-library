@@ -1,0 +1,15 @@
+Codex Agent Setup Library 1.0.0
+Free reference from MagicAiFlow
+
+1. Unzip the complete download.
+2. Open index.html in your browser.
+3. Start with the P0 reading path.
+4. Use Source library to search and filter the references.
+5. Save relevant entries and export your shortlist.
+6. Open examples/agent-brief.md to plan your first agent.
+
+Keep this folder together. Filtering works offline; source links need internet.
+Browser security settings may limit local shortlist persistence. Export before
+closing the page if needed. No configuration is installed by this library.
+
+Source snapshot: 11 October 2026. Recheck changing documentation before use.

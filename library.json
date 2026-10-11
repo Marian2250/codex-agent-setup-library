@@ -1,0 +1,1812 @@
+{
+  "schema_version": 1,
+  "title": "Codex Agent Setup Library",
+  "edition": "1.0.0",
+  "snapshot_date": "2026-10-11",
+  "description": "Source-linked reference with editorial reading paths, file maps, role tags and an agent brief.",
+  "classification_note": "Priorities, agent types, file conventions and learning order are recommendations, not OpenAI product guarantees.",
+  "entries": [
+    {
+      "id": "local-subagents",
+      "title": "Subagents and custom roles",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "description": "Delegation workflows and local custom-agent files, including role instructions and inherited configuration.",
+      "category": "Agents",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "reviewer"
+      ],
+      "notes": [
+        "Standalone role files require name, description, and developer_instructions.",
+        "Local role-file discovery is distinct from hosted Work subagent availability.",
+        "Parallel work uses additional tokens; use narrow assignments and clear file ownership."
+      ],
+      "files": [
+        "~/.codex/agents/<role>.toml",
+        "<repo>/.codex/agents/<role>.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-cli",
+      "title": "Codex CLI",
+      "url": "https://learn.chatgpt.com/docs/codex/cli",
+      "description": "Local terminal entry point for coding, review, command execution, and scripted workflows.",
+      "category": "CLI",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli"
+      ],
+      "agent_types": [
+        "researcher",
+        "implementer",
+        "reviewer",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "This is the Codex terminal client referred to as ChatGPT CLI in the request.",
+        "Start in the intended workspace and inspect the active permissions.",
+        "No installation or update was performed for this library."
+      ],
+      "files": [
+        "<repo>/AGENTS.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-commands",
+      "title": "Developer commands",
+      "url": "https://learn.chatgpt.com/docs/developer-commands",
+      "description": "CLI flags, subcommands, interactive commands, and feature maturity labels.",
+      "category": "CLI",
+      "priority": "P0",
+      "surfaces": [
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "implementer",
+        "reviewer",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "Use command help for the installed version.",
+        "--strict-config rejects unrecognized runtime configuration keys; help output alone does not validate configuration.",
+        "CLI commands do not apply to ordinary ChatGPT web chats."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-advanced",
+      "title": "Advanced configuration",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-advanced",
+      "description": "Advanced local-client settings, trusted project overrides, configuration profiles, instruction discovery, and editor links.",
+      "category": "Configuration",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Profiles use separate <name>.config.toml files; the older nested profile format is retired.",
+        "Some settings are ignored in project config. Check the reference before copying.",
+        "The four supplied fragment topics occur in this page body."
+      ],
+      "files": [
+        "~/.codex/config.toml",
+        "~/.codex/<profile>.config.toml",
+        "<repo>/.codex/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-config-basic",
+      "title": "Config basics",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-basic",
+      "description": "Default configuration layers, overrides, project trust, approvals, and sandbox selection.",
+      "category": "Configuration",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Config precedence and instruction discovery are separate systems.",
+        "Trusted project settings outrank selected profile settings; CLI overrides rank highest among ordinary config.",
+        "Enforced requirements constrain these defaults."
+      ],
+      "files": [
+        "~/.codex/config.toml",
+        "~/.codex/<profile>.config.toml",
+        "<repo>/.codex/config.toml",
+        "/etc/codex/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-config-reference",
+      "title": "Configuration reference",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+      "description": "Schema reference for Codex config and managed requirements, with local/cloud compatibility guidance.",
+      "category": "Configuration",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "reviewer",
+        "operations"
+      ],
+      "notes": [
+        "Presence in a schema is not proof of portability to a hosted runtime.",
+        "Review the installed version before treating a key as usable.",
+        "Selected relevant sections were retrieved from this large reference."
+      ],
+      "files": [
+        "config.toml",
+        "requirements.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-features",
+      "title": "Features",
+      "url": "https://learn.chatgpt.com/docs/features",
+      "description": "Entry point for projects, tools, long-running work, dots, and shared Pages.",
+      "category": "Foundations",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "operations"
+      ],
+      "notes": [
+        "Use it to choose the relevant workflow before configuring an agent."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-projects",
+      "title": "Projects and chats",
+      "url": "https://learn.chatgpt.com/docs/projects",
+      "description": "Organize shared instructions and sources while keeping each distinct outcome in a focused chat.",
+      "category": "Foundations",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer"
+      ],
+      "notes": [
+        "A ChatGPT project does not inherently provide local-folder access.",
+        "Codex CLI uses its working directory, optionally set with --cd.",
+        "Durable local guidance belongs in AGENTS.md or checked-in documentation."
+      ],
+      "files": [
+        "AGENTS.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "quickstart",
+      "title": "ChatGPT and Codex quickstart",
+      "url": "https://learn.chatgpt.com/docs/quickstart",
+      "description": "Choose Chat, Work, or Codex, then select the appropriate project and execution surface.",
+      "category": "Getting started",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cloud",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "operations"
+      ],
+      "notes": [
+        "The desktop application hosts several products. Codex CLI is the terminal interface for coding work; cloud environment setup is a separate step."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-instructions",
+      "title": "Custom instructions with AGENTS.md",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "description": "Instruction discovery and scoped overrides.",
+      "category": "Instructions",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "reviewer",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "One non-empty file per directory: override, standard name, then configured fallbacks.",
+        "Ordinary project notes require an explicit read.",
+        "Size-limit wording differs across guides; verify loading."
+      ],
+      "files": [
+        "~/.codex/AGENTS.md",
+        "~/.codex/AGENTS.override.md",
+        "<repo>/AGENTS.md",
+        "<repo>/<subdir>/AGENTS.override.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-environment-modes",
+      "title": "Codex environments",
+      "url": "https://learn.chatgpt.com/docs/environments/modes",
+      "description": "Choose Local, Worktree or Cloud according to where execution and files belong.",
+      "category": "Local execution",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cloud"
+      ],
+      "agent_types": [
+        "implementer",
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Local and Worktree execute on the computer; a worktree isolates the checkout.",
+        "Cloud does not automatically inherit local files, processes, sign-ins or VPN access."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-local-environment",
+      "title": "Local environments",
+      "url": "https://learn.chatgpt.com/docs/environments/local-environment",
+      "description": "Configure desktop Codex worktree setup scripts and reusable project actions.",
+      "category": "Local execution",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local"
+      ],
+      "agent_types": [
+        "implementer",
+        "operations"
+      ],
+      "notes": [
+        "Available only in Codex in the ChatGPT desktop app.",
+        "The app generates project configuration inside .codex; actions run in the integrated terminal."
+      ],
+      "files": [
+        ".codex/"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-agent-approvals-security",
+      "title": "Agent approvals and security",
+      "url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+      "description": "Sandbox, approvals, network boundaries, protected paths, and automatic review behavior.",
+      "category": "Permissions",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "reviewer",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "approval_policy=untrusted is retired; it differs from project trust_level=untrusted.",
+        "on-request does not prompt for every action already allowed by the sandbox.",
+        "Read-only prevents edits; it does not itself deny access to all sensitive files."
+      ],
+      "files": [
+        "~/.codex/config.toml",
+        "<repo>/.codex/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-rules",
+      "title": "Command rules",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/rules",
+      "description": "Experimental command-prefix policy for requests to execute outside the sandbox.",
+      "category": "Permissions",
+      "priority": "P0",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "reviewer",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "Decisions rank forbidden, prompt, then allow; use execpolicy check before applying rules.",
+        "Rules load beside active configuration layers; project rules require trust.",
+        "Rules are not a universal file-secret or tool-permission boundary."
+      ],
+      "files": [
+        "~/.codex/rules/default.rules",
+        "<repo>/.codex/rules/<purpose>.rules"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-permissions",
+      "title": "Permission profiles",
+      "url": "https://learn.chatgpt.com/docs/permissions",
+      "description": "Beta filesystem and network profiles for local command execution, including path denial.",
+      "category": "Permissions",
+      "priority": "P0",
+      "surfaces": [
+        "cli",
+        "desktop",
+        "local"
+      ],
+      "agent_types": [
+        "automation",
+        "manager",
+        "operations",
+        "reviewer"
+      ],
+      "notes": [
+        "Do not combine profiles with legacy sandbox settings; legacy selection can supersede default_permissions.",
+        "Domain restrictions require an active supported network proxy.",
+        "Use explicit secret-path denials and verify platform behavior before reliance."
+      ],
+      "files": [
+        "~/.codex/config.toml",
+        "<repo>/.codex/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-permission-modes",
+      "title": "Permission modes",
+      "url": "https://learn.chatgpt.com/docs/permission-modes",
+      "description": "Separate filesystem/network boundaries from who reviews actions that cross them.",
+      "category": "Safety",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli"
+      ],
+      "agent_types": [
+        "manager",
+        "operations",
+        "reviewer"
+      ],
+      "notes": [
+        "Approve for me routes eligible requests to automatic review while keeping the workspace-write boundary.",
+        "Availability depends on client, configuration and managed requirements.",
+        "Use /permissions in the CLI to inspect or change the selected mode."
+      ],
+      "files": [
+        "config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-sandbox",
+      "title": "Sandbox",
+      "url": "https://learn.chatgpt.com/docs/sandboxing",
+      "description": "Understand enforced local command boundaries and their separate approval flow.",
+      "category": "Safety",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "operations",
+        "reviewer"
+      ],
+      "notes": [
+        "macOS uses the built-in Seatbelt framework.",
+        "Sandbox policy for local execution does not automatically carry to Work cloud containers.",
+        "Test local and cloud controls separately."
+      ],
+      "files": [
+        "config.toml",
+        "requirements.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-build-skills",
+      "title": "Build skills",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "description": "Reusable skill authoring, discovery, invocation metadata, and plugin distribution.",
+      "category": "Skills and integrations",
+      "priority": "P0",
+      "surfaces": [
+        "cli",
+        "cloud",
+        "desktop",
+        "local"
+      ],
+      "agent_types": [
+        "automation",
+        "implementer",
+        "manager",
+        "researcher",
+        "reviewer"
+      ],
+      "notes": [
+        "SKILL.md needs a name and description; write precise triggers.",
+        "Local authoring paths are .agents/skills; plugins support distribution to other hosts.",
+        "Skills load progressively and do not merge solely because names match."
+      ],
+      "files": [
+        "~/.agents/skills/<skill>/SKILL.md",
+        "<repo>/.agents/skills/<skill>/SKILL.md",
+        "<skill>/agents/openai.yaml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-skills-plugins",
+      "title": "Skills & Plugins",
+      "url": "https://learn.chatgpt.com/docs/skills-and-plugins",
+      "description": "Distinguish a focused reusable workflow from an installable package of skills and tools.",
+      "category": "Skills and plugins",
+      "priority": "P0",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "reviewer"
+      ],
+      "notes": [
+        "Skills bundle guidance and resources; plugins may bundle skills and MCP servers.",
+        "ChatGPT uses @ mentions; Codex supports $ skill mentions.",
+        "Matching a workflow does not itself prove tools are connected or allowed."
+      ],
+      "files": [
+        "SKILL.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-non-interactive-mode",
+      "title": "Non-interactive mode",
+      "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+      "description": "Scripted Codex execution with JSONL events, schema-constrained final output, and resumable work.",
+      "category": "Automation",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "automation",
+        "reviewer",
+        "operations"
+      ],
+      "notes": [
+        "Choose explicit execution boundaries for each automation.",
+        "Keep authentication out of repository-controlled build/test environments.",
+        "--full-auto is a deprecated compatibility flag."
+      ],
+      "files": [
+        "<workspace>/schema.json",
+        "<workspace>/result.json"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-work-overview",
+      "title": "ChatGPT Work Overview",
+      "url": "https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview",
+      "description": "Understand Work's local execution, cloud coordination, source access and workspace controls.",
+      "category": "Cloud execution",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "operations"
+      ],
+      "notes": [
+        "Cloud coordination can use an approved connected local computer for eligible tasks.",
+        "Local execution does not mean conversation context stays only on device.",
+        "Availability depends on plan, configuration and rollout."
+      ],
+      "files": [
+        "requirements.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-cloud-environments",
+      "title": "Cloud environments",
+      "url": "https://learn.chatgpt.com/docs/environments/cloud-environments",
+      "description": "Prepare reusable repository environments and start isolated Codex Cloud tasks.",
+      "category": "Cloud execution",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "implementer",
+        "operations",
+        "manager"
+      ],
+      "notes": [
+        "Install scripts prepare dependencies; start skills describe service readiness.",
+        "Publishing updates future tasks; existing tasks keep their own working state.",
+        "Repository skills are available in cloud tasks; personal local skills are not synced."
+      ],
+      "files": [
+        "AGENTS.md",
+        ".agents/skills/<skill>/SKILL.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-cloud",
+      "title": "Codex Cloud",
+      "url": "https://learn.chatgpt.com/docs/cloud",
+      "description": "Run coding work remotely using a published repository environment and review its changes.",
+      "category": "Cloud execution",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "implementer",
+        "operations",
+        "manager"
+      ],
+      "notes": [
+        "This is the Codex Cloud product overview, distinct from ChatGPT Work Cloud.",
+        "Each task has separate files; remote work can continue while the Mac sleeps."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-configuration",
+      "title": "Configuration overview",
+      "url": "https://learn.chatgpt.com/docs/configuration",
+      "description": "Entry map connecting durable context, settings files, agents, and extensions.",
+      "category": "Configuration",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Use this page as the local setup navigation hub.",
+        "A linked capability still needs runtime and account verification."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-environment",
+      "title": "Environment variables",
+      "url": "https://learn.chatgpt.com/docs/config-file/environment-variables",
+      "description": "Public environment variables for state locations, authentication, installers, and diagnostics.",
+      "category": "Configuration",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "CODEX_HOME changes the state root and must already exist.",
+        "Use a secret reference or scoped process environment; never place actual credentials in the library."
+      ],
+      "files": [
+        "$CODEX_HOME/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-sample",
+      "title": "Sample configuration",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-sample",
+      "description": "Annotated config.toml reference for selecting only the settings needed by a particular agent.",
+      "category": "Configuration",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Treat this as a reference, not a ready-to-install template.",
+        "Model access, client version, and managed requirements still apply.",
+        "Sample introduction and relevant configuration sections were retrieved; the entire large example was not reviewed."
+      ],
+      "files": [
+        "~/.codex/config.toml",
+        "<repo>/.codex/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-dots-controls",
+      "title": "Control your dot",
+      "url": "https://learn.chatgpt.com/docs/dots/controls",
+      "description": "Review activity, action permissions and optional custom rules; stop the appropriate work.",
+      "category": "Dots",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "reviewer",
+        "automation"
+      ],
+      "notes": [
+        "Custom rules do not override built-in safeguards or grant an app connection.",
+        "Pause, stopping a delegated task, and canceling a schedule have separate effects."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-prompting",
+      "title": "Prompting",
+      "url": "https://learn.chatgpt.com/docs/prompting",
+      "description": "Task briefing patterns: desired result, useful context, constraints, and deliverable format.",
+      "category": "Instructions",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "reviewer",
+        "automation"
+      ],
+      "notes": [
+        "Use this to write project descriptions and bounded role assignments.",
+        "Keep task prompts, durable instructions, and retrieved source material separate."
+      ],
+      "files": [
+        "<repo>/docs/project-description.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "docs-mcp",
+      "title": "OpenAI Docs MCP",
+      "url": "https://developers.openai.com/learn/docs-mcp",
+      "description": "Read-only documentation search and page retrieval through OpenAI’s public MCP server.",
+      "category": "Integrations",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "researcher",
+        "implementer",
+        "reviewer"
+      ],
+      "notes": [
+        "The documentation server does not execute API requests. The page includes setup and verification steps for supported clients."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-integrated-terminal",
+      "title": "Integrated terminal",
+      "url": "https://learn.chatgpt.com/docs/integrated-terminal",
+      "description": "Run project checks and inspect terminal output in the desktop chat's project or worktree.",
+      "category": "Local execution",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "local"
+      ],
+      "agent_types": [
+        "implementer",
+        "operations"
+      ],
+      "notes": [
+        "Create reusable actions through local environments for commands used repeatedly."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-worktrees",
+      "title": "Worktrees",
+      "url": "https://learn.chatgpt.com/docs/environments/git-worktrees",
+      "description": "Isolate parallel coding chats in Git worktrees and hand work between checkouts.",
+      "category": "Local execution",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "local"
+      ],
+      "agent_types": [
+        "implementer",
+        "reviewer",
+        "automation"
+      ],
+      "notes": [
+        "Requires a Git repository; new managed worktrees normally start detached.",
+        "Ignored files need separate treatment; review the documented handoff behavior."
+      ],
+      "files": [
+        "$CODEX_HOME/worktrees",
+        ".worktreeinclude"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-managed-configuration",
+      "title": "Managed configuration",
+      "url": "https://learn.chatgpt.com/docs/enterprise/managed-configuration",
+      "description": "Administrative requirements and defaults, their priority, and platform-specific enforcement limits.",
+      "category": "Permissions",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "operations",
+        "reviewer"
+      ],
+      "notes": [
+        "Requirements and overridable defaults have different jobs.",
+        "Local execution and cloud orchestration apply different policy scopes; validate both.",
+        "Managed hooks do not constitute a complete compliance audit trail."
+      ],
+      "files": [
+        "/etc/codex/requirements.toml",
+        "/etc/codex/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-code-review",
+      "title": "Code review",
+      "url": "https://learn.chatgpt.com/docs/code-review",
+      "description": "Review pull requests or local diffs with explicit scope and evidence for each finding.",
+      "category": "Review",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "reviewer"
+      ],
+      "notes": [
+        "Local /review reports findings without changing the working tree.",
+        "A chat review does not itself post, approve or merge the pull request.",
+        "Recheck findings against the current diff and tests."
+      ],
+      "files": [
+        "config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-github-review",
+      "title": "Review GitHub pull requests with Codex",
+      "url": "https://learn.chatgpt.com/docs/third-party/github",
+      "description": "Configure GitHub review and scope repository-specific review checks with AGENTS.md.",
+      "category": "Review",
+      "priority": "P1",
+      "surfaces": [
+        "cloud",
+        "desktop"
+      ],
+      "agent_types": [
+        "reviewer"
+      ],
+      "notes": [
+        "Place durable review criteria near the governed code under a Code Review Rules section.",
+        "Root and applicable nested guidance both matter.",
+        "Review instructions do not replace tests, branch protection or required approvals."
+      ],
+      "files": [
+        "AGENTS.md",
+        "services/<service>/AGENTS.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-auto-review",
+      "title": "Auto-review",
+      "url": "https://learn.chatgpt.com/docs/sandboxing/auto-review",
+      "description": "Understand automatic evaluation of eligible boundary-crossing approval requests.",
+      "category": "Safety",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli"
+      ],
+      "agent_types": [
+        "manager",
+        "reviewer",
+        "operations"
+      ],
+      "notes": [
+        "Routine permitted actions do not need this reviewer.",
+        "A denial requires a materially safer alternative or user decision, not a workaround.",
+        "Custom reviewer policy replaces policy text; it is not an additive snippet."
+      ],
+      "files": [
+        "config.toml",
+        "requirements.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "plugin-skills",
+      "title": "Skills inside plugins",
+      "url": "https://developers.openai.com/plugins/concepts/skills",
+      "description": "Explains how reusable instructions and resources guide workflows around MCP tools.",
+      "category": "Skills & plugins",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cloud",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "implementer",
+        "operations"
+      ],
+      "notes": [
+        "SKILL.md describes the workflow. The MCP server supplies live tools and enforces controlled actions; skill text alone does not grant access."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-mcp",
+      "title": "Model Context Protocol",
+      "url": "https://learn.chatgpt.com/docs/extend/mcp",
+      "description": "Connect tools and data through local STDIO or remote HTTP MCP servers.",
+      "category": "Skills and integrations",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "researcher",
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "Local Codex clients share MCP configuration.",
+        "Hosted ChatGPT does not automatically consume local config or inherit local server connectivity.",
+        "Tool availability and authentication must be checked in the actual session."
+      ],
+      "files": [
+        "~/.codex/config.toml",
+        "<repo>/.codex/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-plugins",
+      "title": "Plugins",
+      "url": "https://learn.chatgpt.com/docs/plugins",
+      "description": "Inspect installed packages, their connections and available tools on the relevant surface.",
+      "category": "Skills and plugins",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "researcher",
+        "operations"
+      ],
+      "notes": [
+        "The documented CLI browser is /plugins; plugin access varies by authentication and surface.",
+        "Plugins are not available in the IDE extension per this guide.",
+        "Local/plugin hooks do not automatically run in cloud-orchestrated Work."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-feature-maturity",
+      "title": "Feature maturity",
+      "url": "https://learn.chatgpt.com/docs/feature-maturity",
+      "description": "Meaning of under-development, experimental, beta, stable, and deprecated documentation labels.",
+      "category": "Verification",
+      "priority": "P1",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "reviewer",
+        "operations"
+      ],
+      "notes": [
+        "Keep maturity separate from whether the installed CLI recognizes a key.",
+        "Recheck labels before generating or deploying a future template."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-long-running",
+      "title": "Long-running work",
+      "url": "https://learn.chatgpt.com/docs/long-running-work",
+      "description": "Use clear outcomes, constraints and completion checks to steer sustained work.",
+      "category": "Workflow",
+      "priority": "P1",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "implementer",
+        "researcher"
+      ],
+      "notes": [
+        "Goal mode is documented for desktop, Codex CLI and IDE.",
+        "Separate parallel writes with ownership or worktrees.",
+        "A goal does not expand permissions."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "agents-api",
+      "title": "Agents API",
+      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "description": "Managed agent sessions that use a Codex harness, tools, environments, and durable task state.",
+      "category": "API agents",
+      "priority": "P2",
+      "surfaces": [
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "implementer",
+        "automation"
+      ],
+      "notes": [
+        "OpenAI manages orchestration and recovery; applications select execution environments and tools. Treat API account access as a separate prerequisite."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "agents-sdk",
+      "title": "Agents SDK",
+      "url": "https://developers.openai.com/api/docs/guides/agents/sdk",
+      "description": "Code-based agent applications in Python or TypeScript, with tools, handoffs, state, guardrails, and tracing.",
+      "category": "API agents",
+      "priority": "P2",
+      "surfaces": [
+        "local",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "implementer",
+        "automation"
+      ],
+      "notes": [
+        "Your application owns hosting, storage and approval logic. This is a separate template family from local Codex role files."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-access-tokens",
+      "title": "Access tokens",
+      "url": "https://learn.chatgpt.com/docs/enterprise/access-tokens",
+      "description": "Scoped user-associated access tokens for supported Codex automation and workspace-agent workflows.",
+      "category": "Authentication",
+      "priority": "P2",
+      "surfaces": [
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "Codex access, Workspace Agents access, and Platform API credentials are different.",
+        "Grant only the scopes the workflow needs; do not put tokens in templates."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-scheduled-tasks",
+      "title": "Scheduled tasks",
+      "url": "https://learn.chatgpt.com/docs/automations",
+      "description": "Compare standalone runs, schedules in existing chats, and supported event triggers.",
+      "category": "Automation",
+      "priority": "P2",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cloud"
+      ],
+      "agent_types": [
+        "automation",
+        "operations"
+      ],
+      "notes": [
+        "Project-scoped local work requires the Mac and desktop app running.",
+        "Test a scoped prompt before scheduling and verify its output.",
+        "Documentation only: this library does not enable recurring work."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "local-customization",
+      "title": "CLI customization",
+      "url": "https://learn.chatgpt.com/docs/cli-customization",
+      "description": "Terminal themes, shell completion, keyboard controls, and external prompt editors.",
+      "category": "CLI",
+      "priority": "P2",
+      "surfaces": [
+        "local",
+        "cli"
+      ],
+      "agent_types": [
+        "implementer",
+        "operations"
+      ],
+      "notes": [
+        "Theme configuration is local to the terminal client.",
+        "Shell startup changes remain a separate implementation step."
+      ],
+      "files": [
+        "$CODEX_HOME/themes/*.tmTheme",
+        "$CODEX_HOME/config.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-legacy-cloud",
+      "title": "Codex Cloud (Legacy)",
+      "url": "https://learn.chatgpt.com/docs/environments/cloud-environment",
+      "description": "Reference for older Code Review, Linear and GitHub integration environments.",
+      "category": "Cloud execution",
+      "priority": "P2",
+      "surfaces": [
+        "cloud"
+      ],
+      "agent_types": [
+        "reviewer",
+        "operations"
+      ],
+      "notes": [
+        "Keep legacy setup/maintenance scripts and setup-only secrets distinct from current Cloud environment behavior.",
+        "Prefer the plural cloud-environments guide for the current experience."
+      ],
+      "files": [
+        "AGENTS.md"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-dots-computers",
+      "title": "Connect computers and apps to your dot",
+      "url": "https://learn.chatgpt.com/docs/dots/computers-and-apps",
+      "description": "Compare the dot's cloud computer with optional local access and app connections.",
+      "category": "Dots",
+      "priority": "P2",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Only one personal computer can be connected at a time.",
+        "Local sign-ins do not automatically become cloud browser sessions.",
+        "Offline status does not revoke a previously granted local connection."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-dots-start",
+      "title": "Get started with your dot",
+      "url": "https://learn.chatgpt.com/docs/dots/getting-started",
+      "description": "Set up a dot, connect chosen tools, and assign a clearly scoped responsibility.",
+      "category": "Dots",
+      "priority": "P2",
+      "surfaces": [
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Messaging, apps and local-computer connections are separate permissions.",
+        "Optional local access requires the computer online with the desktop app open."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-dots",
+      "title": "Meet dots",
+      "url": "https://learn.chatgpt.com/docs/dots",
+      "description": "Overview of an ongoing cloud agent that coordinates responsibilities and delegates work.",
+      "category": "Dots",
+      "priority": "P2",
+      "surfaces": [
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "automation"
+      ],
+      "notes": [
+        "Account eligibility, region, rollout and workspace controls apply.",
+        "Cloud work can continue with the Mac off; local steps need an available connected computer."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-dots-messaging",
+      "title": "Message your dot",
+      "url": "https://learn.chatgpt.com/docs/dots/channels",
+      "description": "Understand voice and messaging contact methods without confusing them with tool access.",
+      "category": "Dots",
+      "priority": "P2",
+      "surfaces": [
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "automation"
+      ],
+      "notes": [
+        "Changing contact methods reaches the same dot; conversations remain separately visible.",
+        "Adding a dot to a channel alone does not establish monitoring."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-dots-memory",
+      "title": "Tasks and memory",
+      "url": "https://learn.chatgpt.com/docs/dots/tasks-and-memory",
+      "description": "Define ongoing outcomes, delegated tasks, saved schedules and memory boundaries.",
+      "category": "Dots",
+      "priority": "P2",
+      "surfaces": [
+        "desktop",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "automation"
+      ],
+      "notes": [
+        "New child tasks receive selected context, not every prior conversation.",
+        "Dot notes and ChatGPT saved memory are distinct.",
+        "A completed run is not proof the requested result was delivered."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "openai-developers-plugin",
+      "title": "OpenAI Developers plugin",
+      "url": "https://developers.openai.com/learn/developers-codex-plugin",
+      "description": "Overview of the developer plugin, API setup assistance, troubleshooting workflows, and client-specific installation.",
+      "category": "Integrations",
+      "priority": "P2",
+      "surfaces": [
+        "local",
+        "cli",
+        "desktop"
+      ],
+      "agent_types": [
+        "implementer",
+        "researcher"
+      ],
+      "notes": [
+        "Plugin access and documentation access are separate capabilities. The plugin is disabled in this workspace; this entry is a reference, not an installation."
+      ],
+      "files": [],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    },
+    {
+      "id": "cloud-agent-security",
+      "title": "Agent Security",
+      "url": "https://learn.chatgpt.com/docs/enterprise/agent-security",
+      "description": "Map enterprise requirements and defaults to orchestration and execution scopes.",
+      "category": "Managed governance",
+      "priority": "P2",
+      "surfaces": [
+        "desktop",
+        "local",
+        "cli",
+        "cloud"
+      ],
+      "agent_types": [
+        "manager",
+        "operations"
+      ],
+      "notes": [
+        "Keep approval and web-search orchestration controls in Global.",
+        "Local and Codex Cloud execution overrides are distinct from Work Cloud capability permissions.",
+        "Managed-device precedence and supported fields need separate verification."
+      ],
+      "files": [
+        "requirements.toml"
+      ],
+      "retrieved": "2026-10-11",
+      "classification_note": "Priority and agent-type assignments are editorial recommendations."
+    }
+  ],
+  "guide": {
+    "title": "Codex Agent Setup Library",
+    "date": "11 October 2026",
+    "scope": "A reference for local Codex, the CLI, the desktop app and cloud agents.",
+    "priorities": [
+      {
+        "level": "P0",
+        "title": "Choose the surface and establish the boundaries",
+        "text": "Read the surface map, instruction discovery, config basics, and permissions first. Define the job, allowed sources, write scope, and what counts as done.",
+        "links": [
+          [
+            "Quickstart",
+            "https://learn.chatgpt.com/docs/quickstart"
+          ],
+          [
+            "AGENTS.md",
+            "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+          ],
+          [
+            "Config basics",
+            "https://learn.chatgpt.com/docs/config-file/config-basic"
+          ],
+          [
+            "Permissions",
+            "https://learn.chatgpt.com/docs/permission-modes"
+          ]
+        ]
+      },
+      {
+        "level": "P1",
+        "title": "Make one agent repeatable",
+        "text": "Add a narrow role, reusable skills, a project description, relevant command rules, and a verification routine. Keep the first workflow small enough to inspect.",
+        "links": [
+          [
+            "Subagents",
+            "https://learn.chatgpt.com/docs/agent-configuration/subagents"
+          ],
+          [
+            "Build skills",
+            "https://learn.chatgpt.com/docs/build-skills"
+          ],
+          [
+            "Rules",
+            "https://learn.chatgpt.com/docs/agent-configuration/rules"
+          ]
+        ]
+      },
+      {
+        "level": "P2",
+        "title": "Add delegation, integrations, and cloud execution",
+        "text": "Expand only when the task needs it. Document credentials ownership, tool access, environment preparation, retries, and human review before introducing unattended work.",
+        "links": [
+          [
+            "Cloud environments",
+            "https://learn.chatgpt.com/docs/environments/cloud-environments"
+          ],
+          [
+            "OpenAI Developers plugin",
+            "https://developers.openai.com/learn/developers-codex-plugin"
+          ],
+          [
+            "Docs MCP",
+            "https://developers.openai.com/learn/docs-mcp"
+          ]
+        ]
+      }
+    ],
+    "instruction_notes": [
+      {
+        "title": "Instruction discovery",
+        "text": "Codex reads personal guidance, then project guidance from the repository root toward the working directory. Within a directory, AGENTS.override.md is selected before AGENTS.md; configured fallback filenames come next. Deeper guidance can refine earlier instructions.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      {
+        "title": "Configuration is a separate layer",
+        "text": "Runtime settings use a separate order, highest first: CLI overrides, trusted project layers nearest the working directory, selected profile, user config, cloud-managed defaults, system config, then built-ins. Enforced requirements constrain those defaults.",
+        "source": "https://learn.chatgpt.com/docs/config-file/config-basic"
+      },
+      {
+        "title": "Roles, skills, and rules have different jobs",
+        "text": "A custom agent defines a specialist. A skill describes a repeatable workflow. A command rule evaluates command patterns. Combining them works best when each has one clear responsibility.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+        "extra_sources": [
+          "https://learn.chatgpt.com/docs/build-skills",
+          "https://learn.chatgpt.com/docs/agent-configuration/rules"
+        ]
+      },
+      {
+        "title": "Project descriptions need an explicit route",
+        "text": "Recommended: link README.md or docs/PROJECT.md from AGENTS.md; ordinary notes are not automatically instruction files.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+        "kind": "recommendation"
+      }
+    ],
+    "files": [
+      {
+        "path": "~/.codex/AGENTS.md",
+        "priority": "P0",
+        "purpose": "Personal instructions",
+        "discovery": "Discovered personal guidance",
+        "description": "Stable cross-project guidance.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      {
+        "path": "~/.codex/AGENTS.override.md",
+        "priority": "P1",
+        "purpose": "Personal override",
+        "discovery": "Discovered instead of personal AGENTS.md",
+        "description": "Recommended for temporary replacement.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      {
+        "path": "<project>/AGENTS.md",
+        "priority": "P0",
+        "purpose": "Project instructions",
+        "discovery": "Discovered along the project path",
+        "description": "Scope, commands and context links.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      {
+        "path": "<subdir>/AGENTS.override.md",
+        "priority": "P1",
+        "purpose": "Scoped override",
+        "discovery": "Selected instead of AGENTS.md in that directory",
+        "description": "Narrow directory-specific guidance.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      {
+        "path": "~/.codex/config.toml",
+        "priority": "P0",
+        "purpose": "Local runtime",
+        "discovery": "Native Codex configuration",
+        "description": "Personal runtime and integration settings.",
+        "source": "https://learn.chatgpt.com/docs/config-file/config-basic"
+      },
+      {
+        "path": "<project>/.codex/config.toml",
+        "priority": "P1",
+        "purpose": "Project runtime",
+        "discovery": "Trusted-project configuration",
+        "description": "Share only project-specific settings; verify current supported keys.",
+        "source": "https://learn.chatgpt.com/docs/config-file/config-advanced"
+      },
+      {
+        "path": "~/.codex/<name>.config.toml",
+        "priority": "P2",
+        "purpose": "Named profile",
+        "discovery": "Selected profile overlay",
+        "description": "Current profile-file convention; older inline profile tables are retired.",
+        "source": "https://learn.chatgpt.com/docs/config-file/config-advanced"
+      },
+      {
+        "path": ".codex/agents/<role>.toml",
+        "priority": "P1",
+        "purpose": "Project specialist",
+        "discovery": "Native custom-agent definition",
+        "description": "Requires name, description, and developer_instructions.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/subagents"
+      },
+      {
+        "path": "~/.codex/agents/<role>.toml",
+        "priority": "P1",
+        "purpose": "Personal specialist",
+        "discovery": "Native custom-agent definition",
+        "description": "Reusable personal specialist, separate from project ownership.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/subagents"
+      },
+      {
+        "path": ".agents/skills/<skill>/SKILL.md",
+        "priority": "P1",
+        "purpose": "Project workflow",
+        "discovery": "Skill discovery",
+        "description": "Reusable task procedure with a clear trigger.",
+        "source": "https://learn.chatgpt.com/docs/build-skills"
+      },
+      {
+        "path": "~/.agents/skills/<skill>/SKILL.md",
+        "priority": "P1",
+        "purpose": "Personal workflow",
+        "discovery": "Skill discovery",
+        "description": "Personal workflows reusable across projects.",
+        "source": "https://learn.chatgpt.com/docs/build-skills"
+      },
+      {
+        "path": "~/.codex/rules/*.rules",
+        "priority": "P1",
+        "purpose": "Command policy",
+        "discovery": "Rules engine; experimental",
+        "description": "Command matching and decisions; validate before applying.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/rules"
+      },
+      {
+        "path": "<project>/.codex/rules/*.rules",
+        "priority": "P1",
+        "purpose": "Project command policy",
+        "discovery": "Rules in trusted configuration layers",
+        "description": "Keep project command decisions scoped and tested.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/rules"
+      },
+      {
+        "path": "README.md / docs/PROJECT.md",
+        "priority": "P0",
+        "purpose": "Project description",
+        "discovery": "Recommended convention; reference explicitly",
+        "description": "Recommended: purpose, domain and success criteria.",
+        "source": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      {
+        "path": "docs/DECISIONS.md",
+        "priority": "P1",
+        "purpose": "Decision log",
+        "discovery": "Recommended convention; reference explicitly",
+        "description": "Record choices, rationale, dates and unresolved questions.",
+        "source": null
+      },
+      {
+        "path": "docs/SOURCES.md",
+        "priority": "P1",
+        "purpose": "Source register",
+        "discovery": "Recommended convention; reference explicitly",
+        "description": "Authoritative sources, refresh dates and access constraints.",
+        "source": null
+      },
+      {
+        "path": "reports/ and outputs/",
+        "priority": "P1",
+        "purpose": "Evidence and deliverables",
+        "discovery": "Recommended convention",
+        "description": "Separate observed evidence from final artifacts; retain verification results.",
+        "source": null
+      },
+      {
+        "path": "Cloud environment settings",
+        "priority": "P2",
+        "purpose": "Remote preparation",
+        "discovery": "Product-managed environment",
+        "description": "Use the documented cloud setup flow; local Mac config is not a cloud deployment manifest.",
+        "source": "https://learn.chatgpt.com/docs/environments/cloud-environments"
+      }
+    ],
+    "tree": "Personal Mac setup (illustrative)\n~/.codex/\n  AGENTS.md\n  config.toml\n  <profile>.config.toml          optional selected profile\n  agents/<role>.toml\n  rules/<policy>.rules\n~/.agents/skills/<workflow>/\n  SKILL.md\n  references/                   optional supporting material\n  scripts/                      optional tested helpers\n\nProject setup (illustrative)\nproject/\n  AGENTS.md\n  README.md\n  .codex/config.toml\n  .codex/agents/<role>.toml\n  .codex/rules/<policy>.rules\n  .agents/skills/<workflow>/SKILL.md\n  docs/PROJECT.md                explicitly referenced context\n  docs/DECISIONS.md\n  docs/SOURCES.md\n  <module>/AGENTS.override.md    only when a scoped exception is needed\n  reports/\n  outputs/",
+    "roles": [
+      {
+        "id": "manager",
+        "title": "Manager / coordinator",
+        "description": "Own the brief, task boundaries, specialist assignments, shared decisions, and acceptance criteria. Assemble evidence into one deliverable.",
+        "minimum": "Project brief + AGENTS.md + delegation policy + handoff format",
+        "surface": "Local coordination first; cloud when continuity is required."
+      },
+      {
+        "id": "researcher",
+        "title": "Researcher / analyst",
+        "description": "Collect sources, distinguish observations from inference, record freshness and gaps, and return citations. Add domain-specific data methods as needed.",
+        "minimum": "Source register + research skill + evidence format + limited tool access",
+        "surface": "Local for private files; cloud for connected or hosted work."
+      },
+      {
+        "id": "implementer",
+        "title": "Builder / implementation agent",
+        "description": "Own a defined set of files, preserve unrelated edits, implement changes, and run relevant tests. Keep deployment authority explicit.",
+        "minimum": "Project instructions + build/test commands + write scope + review checkpoint",
+        "surface": "Codex local, CLI, or a reproducible cloud environment."
+      },
+      {
+        "id": "reviewer",
+        "title": "Reviewer / security specialist",
+        "description": "Inspect a bounded change or artifact and report only evidence-backed issues. Separate review, remediation, and release responsibilities.",
+        "minimum": "Review criteria + source references + read scope + severity definitions",
+        "surface": "Local/CLI reviews or configured GitHub cloud reviews."
+      },
+      {
+        "id": "automation",
+        "title": "Automation / integration agent",
+        "description": "Define triggers, inputs, expected outputs, failure handling, checkpoints, and stop conditions. Reconcile uncertain external outcomes before retrying.",
+        "minimum": "Runbook + tool contract + permissions + retry policy + execution logs",
+        "surface": "CLI jobs, hosted environments, or an application using the SDK/API."
+      },
+      {
+        "id": "operations",
+        "title": "Business operations specialist",
+        "description": "Add a narrow department playbook for procurement, content, documents, finance, or support. Distinguish drafts from approved external actions.",
+        "minimum": "Domain brief + source ownership + relevant skills + action boundaries",
+        "surface": "Local for sensitive documents; Work/dots when supported integrations fit."
+      }
+    ],
+    "brief_fields": [
+      [
+        "Job and outcome",
+        "What will this agent be hired to produce, for whom, and how will success be checked?"
+      ],
+      [
+        "Surface and runtime",
+        "Desktop Codex, CLI, Codex Cloud, Work/dots, or an SDK/API application?"
+      ],
+      [
+        "Sources and access",
+        "Which files, repositories, sites, and connected tools are authoritative and accessible?"
+      ],
+      [
+        "Scope and authority",
+        "What may it read, edit, send, publish, purchase, or schedule? Who approves exceptions?"
+      ],
+      [
+        "Instructions and skills",
+        "Which personal rules apply, which project context is needed, and which workflows should be reusable?"
+      ],
+      [
+        "Delegation and ownership",
+        "What can be parallelized, who owns each output, and what must return to the manager?"
+      ],
+      [
+        "Verification and recovery",
+        "Which checks prove completion, where is evidence saved, and how are partial runs resumed?"
+      ],
+      [
+        "Cost and operating limits",
+        "What duration, frequency, token/spend limits, and escalation conditions are agreed?"
+      ]
+    ],
+    "caveats": [
+      {
+        "title": "Permission profiles are Beta and version-sensitive",
+        "text": "The documented permission profiles do not compose directly with legacy sandbox_mode settings. Choose the intended mechanism after checking the installed version and managed policy.",
+        "links": [
+          [
+            "Permission profiles",
+            "https://learn.chatgpt.com/docs/permissions"
+          ]
+        ]
+      },
+      {
+        "title": "Instruction size limit wording conflicts",
+        "text": "The instruction-size limit is described as combined in AGENTS.md and per-file in Advanced Configuration. Verify loading before relying on either interpretation.",
+        "links": [
+          [
+            "AGENTS.md",
+            "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+          ],
+          [
+            "Advanced Configuration",
+            "https://learn.chatgpt.com/docs/config-file/config-advanced"
+          ]
+        ]
+      },
+      {
+        "title": "Cloud is more than one product",
+        "text": "Codex Cloud, ChatGPT Work/dots, and the Agents API have separate setup and policy surfaces. Account eligibility and tool availability must be checked for the chosen runtime.",
+        "links": [
+          [
+            "Codex Cloud",
+            "https://learn.chatgpt.com/docs/cloud"
+          ],
+          [
+            "dots",
+            "https://learn.chatgpt.com/docs/dots"
+          ],
+          [
+            "Agents API",
+            "https://developers.openai.com/api/docs/guides/agents-api/overview"
+          ]
+        ]
+      },
+      {
+        "title": "Managed Macs have additional precedence rules",
+        "text": "The order above is ordinary configuration precedence. Legacy managed defaults and macOS MDM have separate startup precedence; inspect effective configuration on managed Macs.",
+        "links": [
+          [
+            "Managed configuration",
+            "https://learn.chatgpt.com/docs/enterprise/managed-configuration"
+          ]
+        ]
+      }
+    ]
+  }
+}
