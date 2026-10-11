@@ -4,6 +4,11 @@
   "source_entries": 53,
   "files": [
     {
+      "path": ".github/workflows/deno.yml",
+      "bytes": 825,
+      "sha256": "13dd3890ef8fc50d561639194d9ddac8e0416883369d8a51e55e3feaddbb2470"
+    },
+    {
       "path": ".gitignore",
       "bytes": 63,
       "sha256": "74ac1db8f57eba145e9aa8a0f80c7b0673b47f616d764f06a891aae6aa96b8e5"

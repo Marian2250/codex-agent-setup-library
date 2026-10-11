@@ -1,12 +1,6 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This workflow will install Deno then run `deno lint` and `deno test`.
-# For more information see: https://github.com/denoland/setup-deno
-
-name: Deno
+# This library uses Node's built-in test runner and Python's standard library.
+# The GitHub-hosted Ubuntu runner provides both; no packages are installed.
+name: Library checks
 
 on:
   push:
@@ -25,18 +19,17 @@ jobs:
       - name: Setup repo
         uses: actions/checkout@v4
 
-      - name: Setup Deno
-        # uses: denoland/setup-deno@v1
-        uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # v1.1.2
-        with:
-          deno-version: v1.x
+      - name: Check JavaScript syntax
+        run: |
+          node --check tools/library.cjs
+          node --check tools/demo.cjs
+          node --check tests/library.test.cjs
 
-      # Uncomment this step to verify the use of 'deno fmt' on each commit.
-      # - name: Verify formatting
-      #   run: deno fmt --check
+      - name: Run library behavior tests
+        run: node --test tests/library.test.cjs
 
-      - name: Run linter
-        run: deno lint
+      - name: Verify portable library
+        run: python3 tools/verify.py
 
-      - name: Run tests
-        run: deno test -A
+      - name: Verify starter and guide
+        run: python3 tools/verify-starter.py
