@@ -1,5 +1,5 @@
 {
-  "edition": "1.0.0",
+  "edition": "1.1.0",
   "snapshot_date": "2026-10-11",
   "source_entries": 53,
   "files": [
@@ -10,18 +10,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 5141,
-      "sha256": "c2dad2b3c89ef2a39972c1055f103b0a755a13ea49b235018e388b36bd7532a3"
+      "bytes": 6799,
+      "sha256": "c42efcf47fd95444c426bb629f2b47fb091ea9ed2a5af0f85a3934349643e3f5"
     },
     {
       "path": "SOURCES.md",
-      "bytes": 1844,
-      "sha256": "1b9e69e22889ec70aadaf788c4769b246f43b6207c90ffc955fbfd433e9b9649"
+      "bytes": 2840,
+      "sha256": "299047597824b8de2d96e71299a122cc926f81773bd9fdc2d9b2e47fa11e92e2"
     },
     {
       "path": "START-HERE.txt",
-      "bytes": 650,
-      "sha256": "87dd66ffc5607b408bd8c0409af727b140b0eb31d51e49d6f7e5609ff603919b"
+      "bytes": 1044,
+      "sha256": "1ef1d82a89bb556f6942ade5452cbac20898ff17ecf10956bc49a0af5044c8f1"
     },
     {
       "path": "USAGE.md",
@@ -39,6 +39,51 @@
       "sha256": "5cb7ea227310b8e17dc39062ce3256960be7826624335b87c55d0baa4293ea1c"
     },
     {
+      "path": "docs/.gitbook.yaml",
+      "bytes": 62,
+      "sha256": "8f449ea9886de4357193691e88ed8b92bd6aec464e1c78b0e9c29815c502f10f"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 873,
+      "sha256": "99be1c1b15b86ac8abb0829ae8b2eaa1d1508fbee4da922e7cc5d90994806fee"
+    },
+    {
+      "path": "docs/SUMMARY.md",
+      "bytes": 288,
+      "sha256": "2a6fc0f65f65e1143069ba4e24a8ad03ff6f57678fd8f572fc8833e5ee227e88"
+    },
+    {
+      "path": "docs/file-map.md",
+      "bytes": 1516,
+      "sha256": "2ebab2ea063564efc4cf41d53e9e4e090ac9494975b050af31d26b571998607b"
+    },
+    {
+      "path": "docs/first-task.md",
+      "bytes": 1947,
+      "sha256": "bb57412fd41e5b07ccb6f8de09e2dc4a52405ef3033d56d9ce182b22f18f26d0"
+    },
+    {
+      "path": "docs/gitbook.md",
+      "bytes": 1507,
+      "sha256": "3580a4fefc9880653006c7c5ba9ba63fa2bf6da793d30cec9035c6b05217b549"
+    },
+    {
+      "path": "docs/local-and-cloud.md",
+      "bytes": 1585,
+      "sha256": "7a83ecdda015e52002f611d58b4e22baf4b26839bae31139fea60278e11f2825"
+    },
+    {
+      "path": "docs/start-here.md",
+      "bytes": 1813,
+      "sha256": "03f438d08c17b6c72627e52f234cf67e1de250a6ca9c8617f0cc4e6eaa534a83"
+    },
+    {
+      "path": "docs/troubleshooting.md",
+      "bytes": 1536,
+      "sha256": "0ea6a43582614d6e26430e1be57e314b29428e2a5efe86231b58e335b6ab8cd0"
+    },
+    {
       "path": "examples/agent-brief.md",
       "bytes": 1679,
       "sha256": "a10f065ed3a9e7b67195f2f1aa097380a0dfbea71028b072a908f1007481ce1a"
@@ -47,6 +92,11 @@
       "path": "examples/demo-transcript.txt",
       "bytes": 479,
       "sha256": "26a81d21a07dbbf45de1735f90db2af7142b33234c7347e5dd90c04c2d7c9ea7"
+    },
+    {
+      "path": "examples/first-task-source-brief.md",
+      "bytes": 2882,
+      "sha256": "8a7cded74e07ce38ed82b2ac540212547314ce447720d23336c1c81c0ec95299"
     },
     {
       "path": "examples/research-agent-brief.md",
@@ -60,13 +110,63 @@
     },
     {
       "path": "index.html",
-      "bytes": 151367,
-      "sha256": "8783489b0ef265fc39b094a9b0e0dbe0d83a44d731b70e081ecf64fa043883bf"
+      "bytes": 151433,
+      "sha256": "891f3e1a892a7f30d27a6ad41c9799d3a7270250f7e5f27e3109b515d155d242"
     },
     {
       "path": "library.json",
       "bytes": 65505,
-      "sha256": "e32e3ccbf575848165a72cfc6eddbf42f8cc9b49f666f244b63251c0dd802756"
+      "sha256": "34fb102afb42167f5ee422042d1db0c725024cb738657fa462f296c1a1acef6e"
+    },
+    {
+      "path": "starter-kit/README.md",
+      "bytes": 2940,
+      "sha256": "4c833b90976e695a2f889ea9822c89fced45599426a9e0f592664d6e120955d4"
+    },
+    {
+      "path": "starter-kit/workspace/.agents/skills/source-brief/SKILL.md",
+      "bytes": 1097,
+      "sha256": "2f58892c8461c0272f13274f5d39b7933810ed5a2e5e2b46701cc66222f63d3d"
+    },
+    {
+      "path": "starter-kit/workspace/.codex/agents/starter_researcher.toml",
+      "bytes": 712,
+      "sha256": "96d549045043bd0c686ed6eed40ce23d135150b5cb5d4a0621795a0950815eb4"
+    },
+    {
+      "path": "starter-kit/workspace/.codex/agents/starter_reviewer.toml",
+      "bytes": 631,
+      "sha256": "347fc5b2dcbeafba362bb673764d22f8f7838fd868f542c4deafeb81bc75445b"
+    },
+    {
+      "path": "starter-kit/workspace/AGENTS.md",
+      "bytes": 1180,
+      "sha256": "78f91aec8263698ae1962b58bdfd71314e21bb5460ad3aeae3948002431f96d0"
+    },
+    {
+      "path": "starter-kit/workspace/README.md",
+      "bytes": 1084,
+      "sha256": "25a32444e555d30c27323a87da070ef96ad677a68080e39cf957f64a7470fcdf"
+    },
+    {
+      "path": "starter-kit/workspace/inputs/task.md",
+      "bytes": 1156,
+      "sha256": "70752f374a71168fcb6bcba2ea43c79aa11de5fe64eb677da545693b2dec02ac"
+    },
+    {
+      "path": "starter-kit/workspace/reports/README.md",
+      "bytes": 319,
+      "sha256": "412aa992c82801e3c94c30ea892bf9a44c5c30616d7f73823ca2b2f41ae2f49d"
+    },
+    {
+      "path": "starter-kit/workspace/sources/source-notes.json",
+      "bytes": 2304,
+      "sha256": "e59f82f824281d59e295eca465275fab516155d0f7d30293700284acc57d16ba"
+    },
+    {
+      "path": "starter-kit/workspace/templates/source-brief.md",
+      "bytes": 486,
+      "sha256": "755f86d8ccf4e48644da95aff5182795b0daedf4d41f8ef44e8383493952b193"
     },
     {
       "path": "tests/library.test.cjs",
@@ -82,6 +182,11 @@
       "path": "tools/library.cjs",
       "bytes": 4662,
       "sha256": "880d1c774403f8768ba77444a1f59f95b6983eb5e23056da6b4d98ff5d7895d2"
+    },
+    {
+      "path": "tools/verify-starter.py",
+      "bytes": 4303,
+      "sha256": "5239d36902ed3ce2d0916a4cf4e7e3df4c489c6dd79ddf5384429501c32e9051"
     },
     {
       "path": "tools/verify.py",

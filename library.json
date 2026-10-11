@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "Codex Agent Setup Library",
-  "edition": "1.0.0",
+  "edition": "1.1.0",
   "snapshot_date": "2026-10-11",
   "description": "Source-linked reference with editorial reading paths, file maps, role tags and an agent brief.",
   "classification_note": "Priorities, agent types, file conventions and learning order are recommendations, not OpenAI product guarantees.",

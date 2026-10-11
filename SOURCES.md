@@ -12,4 +12,10 @@ Important original qualifications remain in the guide: configuration precedence 
 
 The worksheet and completed example are original teaching material. The diagram illustrates the reading path. The short animated demonstration is generated from recorded, real source-data query results; it is not a screenshot or recording of the Codex interface.
 
+Edition 1.1.0 adds a free starter workspace and seven-page walkthrough. Its three source notes retain the corresponding library records' titles, URLs, summaries, notes and file lists. The first exercise deliberately uses that dated snapshot, without live research.
+
+The publishing assistant completed the first-task brief in a fresh copied workspace and checked that only the requested report was produced. The public worked example is a copy of that report. Native context discovery, file-format checks and archive checks are separate evidence; this exercise does not establish hosted execution or universal account access.
+
+The local Codex context check found the starter's project instructions and skill. The optional role templates pass TOML/schema checks; role delegation was not exercised. The standard Skill Creator validator needs a YAML package unavailable in the existing runtimes, so the starter checker validates this skill's two-field frontmatter directly without a new dependency.
+
 OpenAI documentation, names and marks remain with their owners. MagicAiFlow provides independent organization and commentary. No endorsement is implied.

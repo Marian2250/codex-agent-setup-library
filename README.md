@@ -1,16 +1,28 @@
 # Codex Agent Setup Library
 
-A free, source-linked reference for people starting with Codex: understand where files belong, choose the documentation for your task, and plan one useful agent.
+A free, source-linked reference and starter workspace for people beginning with Codex. Understand where files belong, complete one small research task, and check the result against real sources.
 
 ![A three-stage reading path: choose the job, make one role repeatable, then add capability when needed.](assets/reading-path.png)
 
-## Open the library
+## Start with one task
+
+**[Follow the starter walkthrough](docs/start-here.md)** → [complete the task](docs/first-task.md) → [check the worked example](examples/first-task-source-brief.md).
+
+Prefer a web reading guide? **[Open the free GitBook walkthrough](https://magicaiflow-llc.gitbook.io/codex-agent-starter-kit/)**. GitHub remains the source for the files and downloads; the GitBook companion is updated manually.
+
+The task produces a short brief explaining project instructions, custom roles and reusable skills. The workspace includes instructions, a skill, two optional roles, three dated source notes and an output template.
+
+**[Download the free starter workspace](https://github.com/Marian2250/codex-agent-setup-library/releases/latest/download/codex-agent-starter-kit.zip)** and open the extracted folder in your existing Codex setup. Keep the hidden `.agents` and `.codex` folders. The exercise needs no new API key, service or package installation; your AI account and its normal usage limits still apply.
+
+Browse [the starter files](starter-kit/workspace/), [the full file map](docs/file-map.md), or [the local/cloud guide](docs/local-and-cloud.md).
+
+## Read the complete library
 
 **[Download the complete free library](https://github.com/Marian2250/codex-agent-setup-library/releases/latest/download/codex-agent-setup-library.zip)**, unzip it, and open `index.html` in your browser. Keep the extracted folder together so the source-data and example links work.
 
 No installation, signup or payment is required to read the downloaded reference. Searching, filtering and shortlist export use JavaScript in your browser. Following the official documentation links requires internet access. Codex access and feature availability are separate from this library.
 
-Prefer individual files? Browse [the HTML](index.html), [structured source data](library.json), and [the planning worksheet](examples/agent-brief.md). GitHub's file view shows the HTML source; opening the downloaded HTML gives you the interactive library.
+Prefer individual files? Browse [the HTML](index.html), [structured source data](library.json), and [the planning worksheet](examples/agent-brief.md). GitHub's file view shows the HTML source; opening the downloaded HTML gives you the interactive library. The complete download also contains the starter workspace and walkthrough.
 
 ## What is inside
 
@@ -21,10 +33,11 @@ Prefer individual files? Browse [the HTML](index.html), [structured source data]
 - **Search and filters:** execution surface, role, priority and topic.
 - **A local shortlist:** save relevant entries and export them as JSON.
 - **An agent brief:** define the job, sources, boundaries, ownership, checks and operating limits.
+- **A starter workspace:** complete one source-backed brief, with a worked example and seven linked guide pages.
 
 The reading priorities and role tags are recommendations. They are separate from the facts in the linked documentation.
 
-## Try one useful example
+## Find sources for your own next task
 
 You want an agent to help research a technical question without changing your project.
 
@@ -58,7 +71,9 @@ Selections are stored locally when your browser permits local storage for file U
 
 ## Source and edition notes
 
-Edition **1.0.0**, based on the **11 October 2026** research snapshot. This is an independent MagicAiFlow reference. OpenAI documentation remains with its original publisher; this library is not an OpenAI product or endorsement.
+Edition **1.1.0**, based on the **11 October 2026** research snapshot. The completed first-task example was produced from the included notes and checked in a copied workspace. It is separate from native discovery and hosted execution checks.
+
+This is an independent MagicAiFlow reference. OpenAI documentation remains with its original publisher; this library is not an OpenAI product or endorsement.
 
 Check current official documentation and your installed version before applying configuration. See [SOURCES.md](SOURCES.md) for provenance and limits, and [USAGE.md](USAGE.md) for access and reuse notes.
 
@@ -71,9 +86,10 @@ Optional developer checks use the installed Node.js and Python standard library:
 ```sh
 node --test tests/library.test.cjs
 python3 tools/verify.py
+python3 tools/verify-starter.py
 node tools/demo.cjs --query AGENTS.md --role researcher --priority P0
 ```
 
-No package installation is needed. The browser library works without Node.js or Python.
+No package installation is needed. Starter checks use Python 3.11 or newer; the browser library works without Node.js or Python.
 
 Made by **MagicAiFlow**. The entire reference is free.

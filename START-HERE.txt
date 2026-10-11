@@ -1,5 +1,15 @@
-Codex Agent Setup Library 1.0.0
+Codex Agent Setup Library 1.1.0
 Free reference from MagicAiFlow
+
+FIRST TASK
+
+Open docs/start-here.md for the linked walkthrough.
+Copy starter-kit/workspace/ to a separate working folder, preserving hidden
+.agents and .codex folders. Read its AGENTS.md and inputs/task.md, then follow
+docs/first-task.md. Compare the report with examples/first-task-source-brief.md.
+Use your existing Codex access; normal account usage limits still apply.
+
+READ THE REFERENCE
 
 1. Unzip the complete download.
 2. Open index.html in your browser.
